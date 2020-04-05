@@ -1,0 +1,8 @@
+n=3
+iters=1000
+nrPop=5
+trace=1
+alpha=1.9
+beta=0.9
+q0=0.5
+rho=0.05
