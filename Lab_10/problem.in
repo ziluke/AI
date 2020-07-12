@@ -1,0 +1,33 @@
+temperature
+very cold,-500,-30,-20,5
+cold,-5,-,10
+normal,5,10,15,20
+warm,15,20,25
+hot,25,30,35,500
+
+humidity
+dry,-500,0,50
+normal,0,50,100
+wet,50,100,500
+
+time
+short,-500,0,50
+medium,0,50,100
+long,50,100,500
+
+rules
+very cold,wet,short
+cold,wet,short
+normal,wet,short
+warm,wet,short
+hot,wet,medium
+very cold,normal,short
+cold,normal,medium
+normal,normal,medium
+warm,normal,medium
+hot,normal,long
+very cold,dry,medium
+cold,dry,long
+normal,dry,long
+warm,dry,long
+hot,dry,long

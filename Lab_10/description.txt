@@ -1,0 +1,44 @@
+Algorithm:
+
+-takes as inputs the temperature and the humidity
+-we calculate the membership of each input value to each class of the input descriptions
+-using the rules, we apply AND between the probabilities of the temperature and humidity class to obtain the 
+	probability of the time class
+-using the Sugeno model, we intersect the output class diagram with the straight lines from the values
+	of the temperature and humidity classes, thus obtaning a value
+-the weighted average is the time output for the given inputs
+
+Calculations:
+
+temperature: {very cold, cold, normal, warm, hot}
+humidity: {dry, normal, wet}
+time: {short, medium, long}
+
+Input: temperature 17, humidity 65
+
+we calculate the membership of the inputs:
+Temparature membership: {very cold: 0, cold: 0, normal: 0.6, warm: 0.4, hot: 0}
+Humidity membership: {dry: 0, normal: 0.7, wet: 0.3}
+
+we then calculate the outputs for each rule and hold only the nonzero ones:
+
+we get the following output values: short: 0.3; short: 0.3; medium: 0.6; medium: 0.4
+
+after that we make the weighted average between the output values that result in the output value for the time class:
+time: 44.375
+
+Input: temperature 20, humidity 75
+
+
+we calculate the membership of the inputs:
+Temparature membership: {very cold: 0, cold: 0, normal: 0, warm: 1.0, hot: 0}
+Humidity membership: {dry: 0, normal: 0.5, wet: 0.5}
+
+we then calculate the outputs for each rule and hold only the nonzero ones:
+
+we get the following output values: short: 0.5; medium: 0.5
+
+after that we make the weighted average between the output values that result in the output value for the time class:
+time: 37.5
+
+
